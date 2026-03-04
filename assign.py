@@ -243,3 +243,17 @@ for t,r,b in configs:
         fp_total += len(predicted - exact_pairs)
         fn_total += len(exact_pairs - predicted)
     print("t =",t,"r =",r,"b =",b,"avg FP =",fp_total/5,"avg FN =",fn_total/5)
+print("\nNew Values with > 0.8 \n")
+for t,r,b in configs:
+    fp_total = 0
+    fn_total = 0
+    for _ in range(5):
+        sigs = user_minhash(users,t)
+        candidates = lsh_users(sigs,r,b)
+        predicted = set()
+        for u,v in candidates:
+            if approx(sigs[u],sigs[v]) >= 0.8:
+                predicted.add((u,v))
+        fp_total += len(predicted - exact_pairs)
+        fn_total += len(exact_pairs - predicted)
+    print("t =",t,"r =",r,"b =",b,"New avg FP =",fp_total/5,"New avg FN =",fn_total/5)
