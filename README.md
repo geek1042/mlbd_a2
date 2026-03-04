@@ -1,4 +1,4 @@
-# MinHash and LSH – Machine Learning with Big Data (Assignment 11)
+# MinHash and LSH – Machine Learning with Big Data (Assignment 2)
 
 ## Introduction
 
