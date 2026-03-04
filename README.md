@@ -229,3 +229,13 @@ Average results over **5 runs**:
 | 200 | 10 | 20 | 0.0    | 8.2    |
 
 Increasing rows per band reduces false positives, while increasing bands increases false negatives.
+
+New Values with > 0.8
+| t   | r  | b  | Avg FP | Avg FN |
+| --- | -- | -- | ------ | ------ |
+| 50  | 5  | 10 | 0.0    | 9.0    |
+| 100 | 5  | 20 | 0.0    | 9.0    |
+| 200 | 5  | 40 | 0.0    | 9.0    |
+| 200 | 10 | 20 | 0.0    | 9.2    |
+
+
